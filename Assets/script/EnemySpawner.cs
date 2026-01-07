@@ -53,9 +53,29 @@ public class EnemySpawner : MonoBehaviour
       
         SpawnRateTime =  WaveDatas[currentWaveIndex].GetSpawnRateTime();
         SpawnRateTimer = 0;
+
+        enemiesWaveSpawned = 0;
     }
 
+    public void OnEnemyDie(BaseEnemy deathEnemy)
+    {
+        if (Spawnedaenemies.Contains(deathEnemy))
+        {
+            Spawnedaenemies.Remove(deathEnemy);
+        }
 
+        
+
+        if (Spawnedaenemies.Count <= 0)
+        {
+            waveWaitTimer = 0;
+            currentWaveIndex++;
+            if (currentWaveIndex < WaveDatas.Count)
+            {
+                isWaitingNextWave = true;
+            }
+        }
+    }
 
 
 }
