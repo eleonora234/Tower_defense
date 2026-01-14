@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 982d2bb636442f7418822d7f75562d62
+guid: 2ce6a136c090c384183e51e79ae9a130
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8797382433146693938
-    second: FieldsTile_01_0
+      213: 8147298820031506132
+    second: soldo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FieldsTile_01_0
+      name: soldo_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 74
+        y: 74
+        width: 1052
+        height: 1052
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23968f066b4961a70800000000000000
-      internalID: 8797382433146693938
+      spriteID: 4d6efee4c15011170800000000000000
+      internalID: 8147298820031506132
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FieldsTile_01_0: 8797382433146693938
+      soldo_0: 8147298820031506132
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

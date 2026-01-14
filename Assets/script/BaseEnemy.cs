@@ -6,12 +6,15 @@ public class BaseEnemy : MonoBehaviour
     public Rigidbody2D body2d;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public Collider2D enemycollider;
     public float speed = 20f;
     public int playerHitdamage = 1;
     public bool isSideSpriteTurnedRight;
     public int MaxHP = 2;
+    public int moneyReward= 2;
     int currentHp = 2;
     bool active = true;
+    bool isDead = false;
 
 
     levelManager LevelManager;
@@ -90,10 +93,18 @@ public class BaseEnemy : MonoBehaviour
         spriteRenderer.color = Color.red;
         Invoke("ResetColor", 0.3f);
 
-        if (currentHp <= 0)
+        if (currentHp <= 0 && !isDead)
         {
+            isDead = true;
+            enemycollider.enabled = false;
+            PlayerManager playerManager = FindAnyObjectByType<PlayerManager>();
+            if (playerManager != null)
+            {
+                playerManager.GainMoney(moneyReward);
+            }
             DestroyMe();
         }
+
     }
 
 
